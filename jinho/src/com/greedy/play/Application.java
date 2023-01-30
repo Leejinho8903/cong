@@ -4,8 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-import com.greedy.common.EmployeeDTO;
-
 public class Application {
 
 	public static void main(String[] args) {
@@ -17,8 +15,8 @@ public class Application {
 			System.out.println("1. 회원 전체 조회");
 			System.out.println("2. 회원번호로 조회");
 			System.out.println("3. 신규 회원 추가");
-			System.out.println("4. 회원 수정");
-			System.out.println("5. 회원 삭제");
+			System.out.println("4. 회원 정보 수정");
+			System.out.println("5. 회원 정보 삭제");
 			System.out.println("6. 회원 아이디 찾기");
 			System.out.print("회원 관리 번호 입력 : ");
 			int no = sc.nextInt();
@@ -90,7 +88,7 @@ public class Application {
 		EmployeeController employeeController = new EmployeeController();
 		do {
 			System.out.println("1. 회원 아이디 조회");
-			System.out.println("2. 회원 정보 수정");
+			System.out.println("2. 회원 아이디,비밀번호 수정");
 			System.out.println("9. 이전 메뉴로");
 			System.out.print("메뉴 번호 입력 : ");
 			int no = sc.nextInt();
@@ -98,7 +96,7 @@ public class Application {
 			switch(no){
 			case 1 : employeeservice.selectId(inputRrn()); break;
 			case 2 : employeeController.modifyemp(inputRRN()); break;
-			case 9 : 
+			case 9 : return;
 			}
 					
 		} while(true); 			
@@ -122,7 +120,7 @@ public class Application {
 		Map<String, String> parameter = new HashMap<>();
 		Scanner sc = new Scanner(System.in);
 		System.out.print("주민 등록 번호 입력 : ");
-		parameter.put("empRrn", sc.nextLine(););
+		parameter.put("empRrn", sc.nextLine());
 		return parameter;
 	}
 
