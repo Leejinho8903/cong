@@ -119,12 +119,10 @@ public class Application {
 
 
 	private static Map<String, String> inputRrn() {
+		Map<String, String> parameter = new HashMap<>();
 		Scanner sc = new Scanner(System.in);
 		System.out.print("주민 등록 번호 입력 : ");
-		String empRrn = sc.nextLine();
-		
-		Map<String, String> parameter = new HashMap<>();
-		parameter.put("empRrn", empRrn);
+		parameter.put("empRrn", sc.nextLine(););
 		return parameter;
 	}
 
